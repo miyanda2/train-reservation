@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Indian Railways </title>
+	<title> Nigerian Railway </title>
 	<link rel="shortcut icon" href="images/favicon.png"></link>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +54,7 @@ session_start();
 			
 			</div>
 			<div id="heading">
-				<a href="index.php">Indian Railways</a>
+				<a href="index.php">Nigerian Railways</a>
 			</div>
 			</div>
 		</div>

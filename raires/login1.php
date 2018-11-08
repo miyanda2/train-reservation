@@ -43,7 +43,7 @@ session_start();
 			</div>		
 			<div>
 			<div id="heading">
-				<a href="index.html">Indian Railways</a>
+				<a href="index.html">Nigerian Railways</a>
 			</div>
 			</div>
 		</div>
