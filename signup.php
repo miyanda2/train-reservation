@@ -156,7 +156,7 @@
 			<p class="text-right text-info">  &copy; 2018 Copyright.</p>	
 			</div>
 			<div style="float:right;">
-			<p class="text-right text-info">	Desinged By : Happiness John</p>
+			<p class="text-right text-info">	Desinged By : Happiness John, Reg No:16/120095</p>
 			</div>
 		</div>
 		</footer>
