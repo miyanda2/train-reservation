@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.5.1
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2017 at 11:08 AM
--- Server version: 5.7.11
--- PHP Version: 5.6.19
+-- Generation Time: Nov 20, 2018 at 09:37 PM
+-- Server version: 5.6.26
+-- PHP Version: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `booking`
 --
 
-CREATE TABLE `booking` (
+CREATE TABLE IF NOT EXISTS `booking` (
   `uname` varchar(15) NOT NULL,
   `Tnumber` int(11) NOT NULL,
   `class` varchar(2) NOT NULL,
@@ -67,7 +67,7 @@ INSERT INTO `booking` (`uname`, `Tnumber`, `class`, `doj`, `DOB`, `fromstn`, `to
 -- Table structure for table `interlist`
 --
 
-CREATE TABLE `interlist` (
+CREATE TABLE IF NOT EXISTS `interlist` (
   `Number` int(6) DEFAULT NULL,
   `st1` varchar(10) DEFAULT NULL,
   `st1arri` varchar(10) DEFAULT NULL,
@@ -110,7 +110,7 @@ INSERT INTO `interlist` (`Number`, `st1`, `st1arri`, `st2`, `st2arri`, `st3`, `s
 -- Table structure for table `seats_availability`
 --
 
-CREATE TABLE `seats_availability` (
+CREATE TABLE IF NOT EXISTS `seats_availability` (
   `Train_No` int(11) NOT NULL,
   `Train_Name` varchar(20) NOT NULL,
   `doj` date NOT NULL,
@@ -1125,7 +1125,7 @@ INSERT INTO `seats_availability` (`Train_No`, `Train_Name`, `doj`, `1A`, `2A`, `
 -- Table structure for table `train_list`
 --
 
-CREATE TABLE `train_list` (
+CREATE TABLE IF NOT EXISTS `train_list` (
   `Number` int(6) NOT NULL,
   `Name` varchar(20) NOT NULL,
   `Origin` varchar(20) NOT NULL,
@@ -1153,17 +1153,14 @@ CREATE TABLE `train_list` (
 --
 
 INSERT INTO `train_list` (`Number`, `Name`, `Origin`, `Destination`, `Arrival`, `Departure`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`, `Sun`, `1A`, `2A`, `3A`, `SL`, `General`, `Ladies`, `Tatkal`) VALUES
-(12009, 'SHATABDI EXP', 'BCT', 'ADI', '22:15', '06:25', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'N', 2500, 1000, 500, 250, 2, 1, 3),
-(12931, 'ADI DOUBLE DECK', 'BCT', 'ADI', 'First st', '14:20', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'N', 2500, 1000, 500, 250, 2, 1, 3),
-(12932, 'BCT DOUBLEDECKE', 'ADI', 'BCT', '13:00', 'Last st', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'N', 2500, 1000, 500, 250, 2, 1, 3),
-(12952, 'MUMBAI RAJDHANI', 'NDLS', 'BCT', '08:25', 'last st', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 2500, 1000, 500, 250, 2, 1, 3),
-(19011, 'GUJARAT EXPRESS', 'ADI', 'BCT', '16:25', '10:35', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 2500, 1000, 500, 250, 2, 1, 3),
-(22210, 'BCT DURONTO', 'NDLS', 'BCT', '16:15', 'Last st', 'N', 'N', 'Y', 'N', 'N', 'N', 'Y', 2500, 1000, 500, 250, 2, 1, 3),
-(22220, 'BCT DURONTO', 'NDLS', 'BCT', '16:15', 'Last st', 'N', 'N', 'Y', 'N', 'N', 'N', 'Y', 2500, 1000, 500, 250, 2, 1, 3),
-(22222, 'BCT DURONTO', 'NDLS', 'BCT', '16:15', 'Last st', 'N', 'N', 'Y', 'N', 'N', 'N', 'Y', 2500, 1000, 500, 250, 2, 1, 3),
-(25222, 'BCT DURONTO', 'NDLS', 'BCT', '16:15', 'Last st', 'N', 'N', 'Y', 'N', 'N', 'N', 'Y', 2500, 1000, 500, 250, 2, 1, 3),
-(29333, 'KARNAVATI EXP', 'AHMD', 'BCT', '08:05', '21:10', 'Y', 'Y', 'Y', 'N', 'Y', 'N', 'Y', 2500, 1000, 500, 250, 2, 1, 3),
-(59442, 'AHMEDABAD PASS', 'ADI', 'BCT', '04:35', '1:35', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 2500, 1000, 500, 250, 2, 1, 3);
+(12009, 'LT1', 'Lagos Terminus', 'Mainland', '-', '8:00', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'N', 2500, 1000, 500, 250, 2, 1, 3),
+(12931, 'LT1', 'Mainland', 'Yaba', '8:13', '8:30', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'N', 2500, 1000, 500, 250, 2, 1, 3),
+(12932, 'LT1', 'Yaba', 'Agege', '9:42', '10:00', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'N', 2500, 1000, 500, 250, 2, 1, 3),
+(12952, 'LT1', 'Agege', 'Iju', '10:27', '10:42', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 2500, 1000, 500, 250, 2, 1, 3),
+(19011, 'LT1', 'Iju', 'Agbado', '11:00', '10:35', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 2500, 1000, 500, 250, 2, 1, 3),
+(22210, 'LT2', 'Lagos Terminus', 'Suru Alaba 1', '4:57', '6:03', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'N', 2500, 1000, 500, 250, 2, 1, 3),
+(22220, 'LT2', 'Suru Alaba 1', 'Suru Alaba 2', '6:18', '6:23', 'Y', 'Y', 'Y', 'N', 'N', 'Y', 'Y', 2500, 1000, 500, 250, 2, 1, 3),
+(22222, 'LT2', 'Suru Alaba 2', 'Suru Alaba 3', '7:00', '7:15', 'Y', 'N', 'Y', 'Y', 'N', 'Y', 'Y', 2500, 1000, 500, 250, 2, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -1171,7 +1168,7 @@ INSERT INTO `train_list` (`Number`, `Name`, `Origin`, `Destination`, `Arrival`, 
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `f_name` varchar(50) NOT NULL,
   `l_name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -1189,7 +1186,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`f_name`, `l_name`, `email`, `password`, `gender`, `marital`, `dob`, `mobile`, `ques`, `ans`) VALUES
-('ayush', 'tripathi', 'ayushtripathi51@gmail.com', '123456789', 'male', 'unmarried', '1999-04-02', 9453890182, 'What was the name of your first school?', '123');
+('ayush', 'tripathi', 'ayushtripathi51@gmail.com', '123456789', 'male', 'unmarried', '1999-04-02', 9453890182, 'What was the name of your first school?', '123'),
+('Micheal', 'Iyanda', 'myke1332@gmail.com', 'myke1332', 'male', 'married', '2000-11-18', 8160317744, 'What is your pets name ?', 'smart');
 
 --
 -- Indexes for dumped tables
