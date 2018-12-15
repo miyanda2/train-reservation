@@ -79,5 +79,13 @@ class BFS {
     }
 }
 
-$graph = $temp;
+//$graph = $temp;
+$graph = array(
+    array(0, 1, 1, 0, 0, 0),
+    array(1, 0, 0, 1, 0, 0),
+    array(1, 0, 0, 1, 1, 1),
+    array(0, 1, 1, 0, 1, 0),
+    array(0, 0, 1, 1, 0, 1),
+    array(0, 0, 1, 0, 1, 0),
+);
 $bfs = new BFS($graph, 2);
